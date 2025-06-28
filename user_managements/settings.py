@@ -112,8 +112,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
+"""_summary_
+
+if it's not checked,  the session will expire  automatically when the browser is closed. But for the users who check on
+the remember_me box , the session will last as long as  it's defined in above settings.py
+
+
+"""
+
+
 LOGIN_REDIRECT_URL = '/'
+#tells django to redirect the user to the home page after a successful login.
 LOGIN_URL = 'login'
+#is the URL or named URL pattern where requests are redirected for login when we are trying
+# to limit acess to certain pages
 
 
 
@@ -137,5 +149,7 @@ SOCIAL_AUTH_GITHUB_SECRET = config('SOCIAL_AUTH_GITHUB_SECRET')
 
 
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
-SOCIAL_AUTH_GOOGLE_0AUTH2_SECRET = ''
+
+
+
+
